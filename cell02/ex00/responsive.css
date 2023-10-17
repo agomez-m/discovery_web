@@ -1,0 +1,6 @@
+
+.custom {
+  height: 80px; /* Altura de la tabla en píxeles (puedes ajustar según tus necesidades) */
+  width: 100%; /* Ancho automático para adaptarse al contenido */
+  border-collapse: collapse;
+}
