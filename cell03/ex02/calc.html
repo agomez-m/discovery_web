@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calc.css">
+    <script src="calc.js"></script>
+</head>
+<body>
+    <label for="numeroiz"> IZDA:</label>
+    <input type="number" id="numeroiz" name="numero" id="" min="0">
+
+    <label for="operacion">Operación:</label>
+    <select id="operacion" name="operacion">
+        <option value="+">Suma (+)</option>
+        <option value="-">Resta (-)</option>
+        <option value="*">Multiplicación (*)</option>
+        <option value="/">División (/)</option>
+        <option value="%">Módulo (%)</option>
+    </select>
+
+    <label for="numerode"> DCHA:</label>
+    <input type="number" id="numerode" name="numero" id="" min="0">
+
+    <button onclick="operacion()">TryMe!</button>
+</body>
+</html>
