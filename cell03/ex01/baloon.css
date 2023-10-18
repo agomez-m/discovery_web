@@ -1,0 +1,7 @@
+.baloon {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius:100px 100px 100px 100px;
+}
+/* rojo verde azul, 420 explota y vuelve a 200, cuando sale del globo se reduce el tamaño y cambia el coor en orden inverso  */
