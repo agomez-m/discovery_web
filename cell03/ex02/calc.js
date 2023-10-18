@@ -18,19 +18,23 @@ function operacion() {
         } else if (operacion == "*") {
             resultado = num1 * num2;
         } else if (operacion == "/") {
-            if (num2 === 0) {
+            if (num2 == 0) {
                 alert("It´s over 9000!");
                 return;
             }
             resultado = num1 / num2;
         } else if (operacion == "%") {
             resultado = num1 % num2;
+            if (num2 == 0) {
+                alert("It´s over 9000!");
+                return;
+            }
         } else {
             alert("Operación no soportada");
             return;
         }
 
-        alert(resultado);
+        alert("resultado = ", resultado);
     }
 
     console.log("Resultado de la operación = ", resultado);
