@@ -8,7 +8,7 @@ function operacion() {
         alert("Error :(");
     } else {
         // Convertir las cadenas a números enteros
-        var num1 = parseInt(numeroiz, 10); // 10 indica que se interpreta como base decimal
+        var num1 = parseInt(numeroiz, 10); // base decimal
         var num2 = parseInt(numerode, 10);
 
         if (operacion == "+") {
@@ -34,7 +34,7 @@ function operacion() {
             return;
         }
 
-        alert("resultado = ", resultado);
+        alert("resultado = " + resultado);
     }
 
     console.log("Resultado de la operación = ", resultado);
