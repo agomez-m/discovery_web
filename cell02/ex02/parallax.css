@@ -1,0 +1,37 @@
+/* .parallax {
+  background-image: url('perro1.png');
+  background-attachment: fixed;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+} */
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff; /* Color de texto blanco */
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Estilo para sección 1 */
+.section1 {
+  background-image: url('perro1.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+}
+
+.section2 {
+  background-color: #000; /* Color de fondo negro */
+
+}
+.section3 {
+  background-image: url('perro2.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
