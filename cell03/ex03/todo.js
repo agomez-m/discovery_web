@@ -1,13 +1,21 @@
 function newtodo() {
     var textoIngresado = prompt("Introduce un texto:");
-        if (textoIngresado !== null) {
-            alert("Tarea creada: " + textoIngresado);
+    if (textoIngresado !== null) {
+        var contenedor = document.getElementById("ft_list");
+        var nuevaTarea = document.createElement("li"); // Crear un elemento de lista
+        nuevaTarea.textContent = "Tarea: " + textoIngresado;
+        
+        var confirmar = confirm("¿Seguro que deseas agregar esta tarea?");
+        if (confirmar) {
+            // Agregar la nueva tarea al principio de la lista
+            contenedor.insertBefore(nuevaTarea, contenedor.firstChild);
+            
+            // Guardar la lista de tareas en una cookie
+            setCookie("respuestas", contenedor.innerHTML, 365);
         }
-    var contenedor = document.getElementById("ft_list");
-    contenedor.innerHTML += "Tarea: " + textoIngresado + "<br>";
-    
-    setCookie("respuestas", contenedor.innerHTML, 365);
+    }
 }
+
 
 function cargarRespuestasDesdeCookie() {
     var contenedor = document.getElementById("ft_list");
@@ -38,6 +46,24 @@ function getCookie(nombre) {
         }
     }
     return "";
+
 }
+
+document.getElementById("ft_list").addEventListener("click", function (event) {
+    var tarea = event.target.closest("li");
+    if (tarea) {
+        var confirmar = confirm("¿Seguro que deseas eliminar esta tarea?");
+        if (confirmar) {
+            tarea.remove();
+
+            // Elimina la tarea de la cookie
+            var contenedor = document.getElementById("ft_list");
+            setCookie("respuestas", contenedor.innerHTML, 365);
+        }
+    }
+});
+
+
+
 
 cargarRespuestasDesdeCookie();

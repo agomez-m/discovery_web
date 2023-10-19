@@ -12,7 +12,6 @@ function hinchar (){
     var nuevoAncho = anchoActual + 10;
     
     
-
     div.style.backgroundColor = colores[colorActual];
     colorActual = (colorActual + 1) % colores.length; // Ciclo entre los colores
 
